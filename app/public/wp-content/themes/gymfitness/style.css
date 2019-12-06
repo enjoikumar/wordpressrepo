@@ -1,0 +1,226 @@
+/*
+  Theme Name: Test_1
+  Theme URI:
+  Author: Name
+  Author URI:
+  Description: Testing
+  Version: 1.0
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: Grid, Flexbox ready, mobile first, test theme
+  Text Domain: Test_1
+*/
+
+:root {
+  /** Fonts **/
+  --headlineFont: 'Open Sans', sans-serif;
+  --bodyFont: 'Lora', serif;
+
+  /** Colors **/
+  --primaryBlue: #383dd6;
+  --secondaryPink: #FFA4DF;
+}
+
+
+body{
+  /* background-color: var(--primaryBlue); */
+  background-color: gray;
+
+  font-family: var(--bodyFont);
+}
+
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+/* ========== HEADING/global Styles ========== */
+
+h1, h2, h3{
+  font-family: var(--headlineFont);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.h1-headline-large{
+  font-size: 60px
+}
+.h1-headline-small{
+  font-size: 48px;
+}
+
+.h2-secondary-large{
+  font-size: 32px;
+}
+.h2-secondary-small{
+  font-size: 24px;
+}
+
+.body-large{
+  font-size: 21px;
+}
+.body-small{
+  font-size: 24px;
+}
+
+.date-large{
+  font-size: 21px;
+}
+.date-small{
+  font-size: 18px;
+}
+
+.tag-large{
+  font-size: 21px;
+}
+.tag-medium{
+  font-size: 18px;
+}
+.tag-small{
+  font-size: 14px;
+}
+
+.everybrow-label{
+  font-size: 16px;
+}
+
+.testimonial{
+  font-size: 36px;
+}
+
+.cta-label{
+  font-size: 21px;
+}
+
+.hyperlink-large{
+  font-size: 21px;
+}
+.hyperlink-small{
+  font-size: 18px;
+}
+
+/*========= collapsible menu ==========*/
+.b-a, .bar, .bar:before, .bar:after {
+  transition: all .25s;
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 6px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.menu-collapsed {
+  transition: all .25s;
+  position: fixed;
+  top: 10px;
+  left: 9px;
+  height: 36px;
+  width: 36px;
+  z-index: 1;
+  cursor: pointer;
+}
+.menu-collapsed ul {
+  transition: all 0s;
+  position: fixed;
+  left: -9000px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.menu-collapsed img{
+  display: none;
+}
+
+.bar {
+  position: fixed;
+  left: 97%;
+  top: 24px;
+}
+.bar:before {
+  top: -8px;
+}
+.bar:after {
+  top: 8px;
+}
+
+.b-a-expanded, .menu-expanded .bar:before, .menu-expanded .bar:after {
+  transition: all .25s;
+  top: -0px;
+}
+
+.menu-expanded {
+  transition: all .25s;
+  text-align: center;
+  height: 600px;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  left: 0;
+  background-color: var(--primaryBlue);
+}
+.menu-expanded img{
+  display: block;
+  float: left;
+  margin-top: 22px;
+}
+
+.menu-expanded ul {
+  transition: all 0s;
+  left: 0;
+  z-index: 2;
+}
+.menu-expanded a {
+  transition: all .15s;
+  text-decoration: none;
+  padding: 5px;
+  color: #fff;
+  display: block;
+  font-size: 60px;
+}
+.menu-expanded a:hover {
+  color: var(--secondaryPink);
+}
+.menu-expanded .bar {
+  background-color: transparent;
+  transition: all .25s;
+}
+.menu-expanded .bar:before {
+  transform: rotate(45deg);
+}
+.menu-expanded .bar:after {
+  transform: rotate(-45deg);
+}
+
+
+
+/*========== Footer styles ========== */
+.site-footer{
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  font-family: var(--bodyFont);
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+}
